@@ -10,3 +10,5 @@ use_ok( 'Vm' ) or exit;
 
 my $vm = Vm->new();
 isa_ok($vm,'Vm'); 
+
+
