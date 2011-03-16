@@ -3,6 +3,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 PROJECT(KsanaVM) #项目名称
 # add the binary tree to the search path for include files
 # so that we will find TutorialConfig.h
+add_library(headers main.c)
 include_directories("${PROJECT_BINARY_DIR}/headers")
 add_subdirectory(headers)
 
@@ -10,8 +11,6 @@ add_subdirectory(headers)
 #把当前目录(.)下所有源代码文件和头文件加入变量SRC_LIST
 #AUX_SOURCE_DIRECTORY(. SRC_LIST) 
 
-include_directories("${PROJECT_BINARY_DIR}/srcs")
-add_subdirectory(srcs)
 #生成应用程序 ksanavm 
-ADD_EXECUTABLE(ksanavm ${SRC_LIST})
-target_link_libraries(ksanavm headers srcs)
+ADD_EXECUTABLE(ksanavm main.c )
+target_link_libraries(ksanavm headers )

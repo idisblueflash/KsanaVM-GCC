@@ -1,1 +1,2 @@
+/home/fox/KsanaVM-GCC/02-lesson01-compiling-test/build/CMakeFiles/headers.dir
 /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/build/CMakeFiles/ksanavm.dir

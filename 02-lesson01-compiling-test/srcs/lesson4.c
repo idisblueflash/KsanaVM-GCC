@@ -5,7 +5,7 @@ yap 2007.12.17 release under GPL 3.0
 
 */
 
-#include "headers/vm.h"
+#include "../headers/vm.h"
 #include <stdio.h>
 #include <string.h>
 

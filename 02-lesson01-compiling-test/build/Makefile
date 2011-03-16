@@ -96,6 +96,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named headers
+
+# Build rule for target.
+headers: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 headers
+.PHONY : headers
+
+# fast build rule for target.
+headers/fast:
+	$(MAKE) -f CMakeFiles/headers.dir/build.make CMakeFiles/headers.dir/build
+.PHONY : headers/fast
+
+#=============================================================================
 # Target rules for targets named ksanavm
 
 # Build rule for target.
@@ -108,107 +121,12 @@ ksanavm/fast:
 	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/build
 .PHONY : ksanavm/fast
 
-lesson1.o: lesson1.c.o
-.PHONY : lesson1.o
-
-# target to build an object file
-lesson1.c.o:
-	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/lesson1.c.o
-.PHONY : lesson1.c.o
-
-lesson1.i: lesson1.c.i
-.PHONY : lesson1.i
-
-# target to preprocess a source file
-lesson1.c.i:
-	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/lesson1.c.i
-.PHONY : lesson1.c.i
-
-lesson1.s: lesson1.c.s
-.PHONY : lesson1.s
-
-# target to generate assembly for a file
-lesson1.c.s:
-	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/lesson1.c.s
-.PHONY : lesson1.c.s
-
-lesson2.o: lesson2.c.o
-.PHONY : lesson2.o
-
-# target to build an object file
-lesson2.c.o:
-	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/lesson2.c.o
-.PHONY : lesson2.c.o
-
-lesson2.i: lesson2.c.i
-.PHONY : lesson2.i
-
-# target to preprocess a source file
-lesson2.c.i:
-	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/lesson2.c.i
-.PHONY : lesson2.c.i
-
-lesson2.s: lesson2.c.s
-.PHONY : lesson2.s
-
-# target to generate assembly for a file
-lesson2.c.s:
-	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/lesson2.c.s
-.PHONY : lesson2.c.s
-
-lesson3.o: lesson3.c.o
-.PHONY : lesson3.o
-
-# target to build an object file
-lesson3.c.o:
-	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/lesson3.c.o
-.PHONY : lesson3.c.o
-
-lesson3.i: lesson3.c.i
-.PHONY : lesson3.i
-
-# target to preprocess a source file
-lesson3.c.i:
-	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/lesson3.c.i
-.PHONY : lesson3.c.i
-
-lesson3.s: lesson3.c.s
-.PHONY : lesson3.s
-
-# target to generate assembly for a file
-lesson3.c.s:
-	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/lesson3.c.s
-.PHONY : lesson3.c.s
-
-lesson4.o: lesson4.c.o
-.PHONY : lesson4.o
-
-# target to build an object file
-lesson4.c.o:
-	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/lesson4.c.o
-.PHONY : lesson4.c.o
-
-lesson4.i: lesson4.c.i
-.PHONY : lesson4.i
-
-# target to preprocess a source file
-lesson4.c.i:
-	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/lesson4.c.i
-.PHONY : lesson4.c.i
-
-lesson4.s: lesson4.c.s
-.PHONY : lesson4.s
-
-# target to generate assembly for a file
-lesson4.c.s:
-	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/lesson4.c.s
-.PHONY : lesson4.c.s
-
 main.o: main.c.o
 .PHONY : main.o
 
 # target to build an object file
 main.c.o:
+	$(MAKE) -f CMakeFiles/headers.dir/build.make CMakeFiles/headers.dir/main.c.o
 	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/main.c.o
 .PHONY : main.c.o
 
@@ -217,6 +135,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
+	$(MAKE) -f CMakeFiles/headers.dir/build.make CMakeFiles/headers.dir/main.c.i
 	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/main.c.i
 .PHONY : main.c.i
 
@@ -225,32 +144,9 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
+	$(MAKE) -f CMakeFiles/headers.dir/build.make CMakeFiles/headers.dir/main.c.s
 	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/main.c.s
 .PHONY : main.c.s
-
-vm.o: vm.c.o
-.PHONY : vm.o
-
-# target to build an object file
-vm.c.o:
-	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/vm.c.o
-.PHONY : vm.c.o
-
-vm.i: vm.c.i
-.PHONY : vm.i
-
-# target to preprocess a source file
-vm.c.i:
-	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/vm.c.i
-.PHONY : vm.c.i
-
-vm.s: vm.c.s
-.PHONY : vm.s
-
-# target to generate assembly for a file
-vm.c.s:
-	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/vm.c.s
-.PHONY : vm.c.s
 
 # Help Target
 help:
@@ -259,26 +155,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... headers"
 	@echo "... ksanavm"
 	@echo "... rebuild_cache"
-	@echo "... lesson1.o"
-	@echo "... lesson1.i"
-	@echo "... lesson1.s"
-	@echo "... lesson2.o"
-	@echo "... lesson2.i"
-	@echo "... lesson2.s"
-	@echo "... lesson3.o"
-	@echo "... lesson3.i"
-	@echo "... lesson3.s"
-	@echo "... lesson4.o"
-	@echo "... lesson4.i"
-	@echo "... lesson4.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... vm.o"
-	@echo "... vm.i"
-	@echo "... vm.s"
 .PHONY : help
 
 

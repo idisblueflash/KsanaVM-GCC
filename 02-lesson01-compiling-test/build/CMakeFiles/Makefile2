@@ -50,13 +50,48 @@ CMAKE_SOURCE_DIR = /home/fox/KsanaVM-GCC/02-lesson01-compiling-test
 CMAKE_BINARY_DIR = /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/build
 
 #=============================================================================
+# Target rules for target CMakeFiles/headers.dir
+
+# All Build rule for target.
+CMakeFiles/headers.dir/all:
+	$(MAKE) -f CMakeFiles/headers.dir/build.make CMakeFiles/headers.dir/depend
+	$(MAKE) -f CMakeFiles/headers.dir/build.make CMakeFiles/headers.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/build/CMakeFiles  1
+	@echo "Built target headers"
+.PHONY : CMakeFiles/headers.dir/all
+
+# Include target in all.
+all: CMakeFiles/headers.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/headers.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/headers.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/build/CMakeFiles 0
+.PHONY : CMakeFiles/headers.dir/rule
+
+# Convenience name for target.
+headers: CMakeFiles/headers.dir/rule
+.PHONY : headers
+
+# clean rule for target.
+CMakeFiles/headers.dir/clean:
+	$(MAKE) -f CMakeFiles/headers.dir/build.make CMakeFiles/headers.dir/clean
+.PHONY : CMakeFiles/headers.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/headers.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/ksanavm.dir
 
 # All Build rule for target.
-CMakeFiles/ksanavm.dir/all:
+CMakeFiles/ksanavm.dir/all: CMakeFiles/headers.dir/all
 	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/depend
 	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/build/CMakeFiles  1 2 3 4 5 6
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/build/CMakeFiles  2
 	@echo "Built target ksanavm"
 .PHONY : CMakeFiles/ksanavm.dir/all
 
@@ -66,7 +101,7 @@ all: CMakeFiles/ksanavm.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ksanavm.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ksanavm.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/build/CMakeFiles 0
 .PHONY : CMakeFiles/ksanavm.dir/rule

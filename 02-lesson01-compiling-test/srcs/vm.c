@@ -6,7 +6,7 @@ yap 2007.12.17
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
-#include "headers/vm.h"
+#include "../headers/vm.h"
 
 
 /* --------------------------Lesson 1 ------------------------*/

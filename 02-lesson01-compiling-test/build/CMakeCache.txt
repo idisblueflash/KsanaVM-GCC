@@ -154,6 +154,12 @@ KsanaVM_BINARY_DIR:STATIC=/home/fox/KsanaVM-GCC/02-lesson01-compiling-test/build
 //Value Computed by CMake
 KsanaVM_SOURCE_DIR:STATIC=/home/fox/KsanaVM-GCC/02-lesson01-compiling-test
 
+//Dependencies for target
+headers_LIB_DEPENDS:STATIC=
+
+//Dependencies for target
+srcs_LIB_DEPENDS:STATIC=
+
 
 ########################
 # INTERNAL cache entries

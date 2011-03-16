@@ -46,81 +46,9 @@ include CMakeFiles/ksanavm.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ksanavm.dir/flags.make
 
-CMakeFiles/ksanavm.dir/lesson1.c.o: CMakeFiles/ksanavm.dir/flags.make
-CMakeFiles/ksanavm.dir/lesson1.c.o: ../lesson1.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/ksanavm.dir/lesson1.c.o"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/ksanavm.dir/lesson1.c.o   -c /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/lesson1.c
-
-CMakeFiles/ksanavm.dir/lesson1.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ksanavm.dir/lesson1.c.i"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/lesson1.c > CMakeFiles/ksanavm.dir/lesson1.c.i
-
-CMakeFiles/ksanavm.dir/lesson1.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ksanavm.dir/lesson1.c.s"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/lesson1.c -o CMakeFiles/ksanavm.dir/lesson1.c.s
-
-CMakeFiles/ksanavm.dir/lesson1.c.o.requires:
-.PHONY : CMakeFiles/ksanavm.dir/lesson1.c.o.requires
-
-CMakeFiles/ksanavm.dir/lesson1.c.o.provides: CMakeFiles/ksanavm.dir/lesson1.c.o.requires
-	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/lesson1.c.o.provides.build
-.PHONY : CMakeFiles/ksanavm.dir/lesson1.c.o.provides
-
-CMakeFiles/ksanavm.dir/lesson1.c.o.provides.build: CMakeFiles/ksanavm.dir/lesson1.c.o
-.PHONY : CMakeFiles/ksanavm.dir/lesson1.c.o.provides.build
-
-CMakeFiles/ksanavm.dir/lesson3.c.o: CMakeFiles/ksanavm.dir/flags.make
-CMakeFiles/ksanavm.dir/lesson3.c.o: ../lesson3.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/ksanavm.dir/lesson3.c.o"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/ksanavm.dir/lesson3.c.o   -c /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/lesson3.c
-
-CMakeFiles/ksanavm.dir/lesson3.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ksanavm.dir/lesson3.c.i"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/lesson3.c > CMakeFiles/ksanavm.dir/lesson3.c.i
-
-CMakeFiles/ksanavm.dir/lesson3.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ksanavm.dir/lesson3.c.s"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/lesson3.c -o CMakeFiles/ksanavm.dir/lesson3.c.s
-
-CMakeFiles/ksanavm.dir/lesson3.c.o.requires:
-.PHONY : CMakeFiles/ksanavm.dir/lesson3.c.o.requires
-
-CMakeFiles/ksanavm.dir/lesson3.c.o.provides: CMakeFiles/ksanavm.dir/lesson3.c.o.requires
-	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/lesson3.c.o.provides.build
-.PHONY : CMakeFiles/ksanavm.dir/lesson3.c.o.provides
-
-CMakeFiles/ksanavm.dir/lesson3.c.o.provides.build: CMakeFiles/ksanavm.dir/lesson3.c.o
-.PHONY : CMakeFiles/ksanavm.dir/lesson3.c.o.provides.build
-
-CMakeFiles/ksanavm.dir/lesson4.c.o: CMakeFiles/ksanavm.dir/flags.make
-CMakeFiles/ksanavm.dir/lesson4.c.o: ../lesson4.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/ksanavm.dir/lesson4.c.o"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/ksanavm.dir/lesson4.c.o   -c /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/lesson4.c
-
-CMakeFiles/ksanavm.dir/lesson4.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ksanavm.dir/lesson4.c.i"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/lesson4.c > CMakeFiles/ksanavm.dir/lesson4.c.i
-
-CMakeFiles/ksanavm.dir/lesson4.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ksanavm.dir/lesson4.c.s"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/lesson4.c -o CMakeFiles/ksanavm.dir/lesson4.c.s
-
-CMakeFiles/ksanavm.dir/lesson4.c.o.requires:
-.PHONY : CMakeFiles/ksanavm.dir/lesson4.c.o.requires
-
-CMakeFiles/ksanavm.dir/lesson4.c.o.provides: CMakeFiles/ksanavm.dir/lesson4.c.o.requires
-	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/lesson4.c.o.provides.build
-.PHONY : CMakeFiles/ksanavm.dir/lesson4.c.o.provides
-
-CMakeFiles/ksanavm.dir/lesson4.c.o.provides.build: CMakeFiles/ksanavm.dir/lesson4.c.o
-.PHONY : CMakeFiles/ksanavm.dir/lesson4.c.o.provides.build
-
 CMakeFiles/ksanavm.dir/main.c.o: CMakeFiles/ksanavm.dir/flags.make
 CMakeFiles/ksanavm.dir/main.c.o: ../main.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/ksanavm.dir/main.c.o"
 	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/ksanavm.dir/main.c.o   -c /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/main.c
 
@@ -142,72 +70,15 @@ CMakeFiles/ksanavm.dir/main.c.o.provides: CMakeFiles/ksanavm.dir/main.c.o.requir
 CMakeFiles/ksanavm.dir/main.c.o.provides.build: CMakeFiles/ksanavm.dir/main.c.o
 .PHONY : CMakeFiles/ksanavm.dir/main.c.o.provides.build
 
-CMakeFiles/ksanavm.dir/lesson2.c.o: CMakeFiles/ksanavm.dir/flags.make
-CMakeFiles/ksanavm.dir/lesson2.c.o: ../lesson2.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/build/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/ksanavm.dir/lesson2.c.o"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/ksanavm.dir/lesson2.c.o   -c /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/lesson2.c
-
-CMakeFiles/ksanavm.dir/lesson2.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ksanavm.dir/lesson2.c.i"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/lesson2.c > CMakeFiles/ksanavm.dir/lesson2.c.i
-
-CMakeFiles/ksanavm.dir/lesson2.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ksanavm.dir/lesson2.c.s"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/lesson2.c -o CMakeFiles/ksanavm.dir/lesson2.c.s
-
-CMakeFiles/ksanavm.dir/lesson2.c.o.requires:
-.PHONY : CMakeFiles/ksanavm.dir/lesson2.c.o.requires
-
-CMakeFiles/ksanavm.dir/lesson2.c.o.provides: CMakeFiles/ksanavm.dir/lesson2.c.o.requires
-	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/lesson2.c.o.provides.build
-.PHONY : CMakeFiles/ksanavm.dir/lesson2.c.o.provides
-
-CMakeFiles/ksanavm.dir/lesson2.c.o.provides.build: CMakeFiles/ksanavm.dir/lesson2.c.o
-.PHONY : CMakeFiles/ksanavm.dir/lesson2.c.o.provides.build
-
-CMakeFiles/ksanavm.dir/vm.c.o: CMakeFiles/ksanavm.dir/flags.make
-CMakeFiles/ksanavm.dir/vm.c.o: ../vm.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/build/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/ksanavm.dir/vm.c.o"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/ksanavm.dir/vm.c.o   -c /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/vm.c
-
-CMakeFiles/ksanavm.dir/vm.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ksanavm.dir/vm.c.i"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/vm.c > CMakeFiles/ksanavm.dir/vm.c.i
-
-CMakeFiles/ksanavm.dir/vm.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ksanavm.dir/vm.c.s"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/vm.c -o CMakeFiles/ksanavm.dir/vm.c.s
-
-CMakeFiles/ksanavm.dir/vm.c.o.requires:
-.PHONY : CMakeFiles/ksanavm.dir/vm.c.o.requires
-
-CMakeFiles/ksanavm.dir/vm.c.o.provides: CMakeFiles/ksanavm.dir/vm.c.o.requires
-	$(MAKE) -f CMakeFiles/ksanavm.dir/build.make CMakeFiles/ksanavm.dir/vm.c.o.provides.build
-.PHONY : CMakeFiles/ksanavm.dir/vm.c.o.provides
-
-CMakeFiles/ksanavm.dir/vm.c.o.provides.build: CMakeFiles/ksanavm.dir/vm.c.o
-.PHONY : CMakeFiles/ksanavm.dir/vm.c.o.provides.build
-
 # Object files for target ksanavm
 ksanavm_OBJECTS = \
-"CMakeFiles/ksanavm.dir/lesson1.c.o" \
-"CMakeFiles/ksanavm.dir/lesson3.c.o" \
-"CMakeFiles/ksanavm.dir/lesson4.c.o" \
-"CMakeFiles/ksanavm.dir/main.c.o" \
-"CMakeFiles/ksanavm.dir/lesson2.c.o" \
-"CMakeFiles/ksanavm.dir/vm.c.o"
+"CMakeFiles/ksanavm.dir/main.c.o"
 
 # External object files for target ksanavm
 ksanavm_EXTERNAL_OBJECTS =
 
-ksanavm: CMakeFiles/ksanavm.dir/lesson1.c.o
-ksanavm: CMakeFiles/ksanavm.dir/lesson3.c.o
-ksanavm: CMakeFiles/ksanavm.dir/lesson4.c.o
 ksanavm: CMakeFiles/ksanavm.dir/main.c.o
-ksanavm: CMakeFiles/ksanavm.dir/lesson2.c.o
-ksanavm: CMakeFiles/ksanavm.dir/vm.c.o
+ksanavm: libheaders.a
 ksanavm: CMakeFiles/ksanavm.dir/build.make
 ksanavm: CMakeFiles/ksanavm.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C executable ksanavm"
@@ -217,12 +88,7 @@ ksanavm: CMakeFiles/ksanavm.dir/link.txt
 CMakeFiles/ksanavm.dir/build: ksanavm
 .PHONY : CMakeFiles/ksanavm.dir/build
 
-CMakeFiles/ksanavm.dir/requires: CMakeFiles/ksanavm.dir/lesson1.c.o.requires
-CMakeFiles/ksanavm.dir/requires: CMakeFiles/ksanavm.dir/lesson3.c.o.requires
-CMakeFiles/ksanavm.dir/requires: CMakeFiles/ksanavm.dir/lesson4.c.o.requires
 CMakeFiles/ksanavm.dir/requires: CMakeFiles/ksanavm.dir/main.c.o.requires
-CMakeFiles/ksanavm.dir/requires: CMakeFiles/ksanavm.dir/lesson2.c.o.requires
-CMakeFiles/ksanavm.dir/requires: CMakeFiles/ksanavm.dir/vm.c.o.requires
 .PHONY : CMakeFiles/ksanavm.dir/requires
 
 CMakeFiles/ksanavm.dir/clean:
