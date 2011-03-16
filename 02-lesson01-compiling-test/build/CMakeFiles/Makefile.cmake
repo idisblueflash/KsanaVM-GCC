@@ -35,6 +35,7 @@ SET(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 SET(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "headers/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

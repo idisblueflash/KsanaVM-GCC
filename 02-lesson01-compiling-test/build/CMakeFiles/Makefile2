@@ -85,6 +85,21 @@ clean: CMakeFiles/ksanavm.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory headers
+
+# Convenience name for "all" pass in the directory.
+headers/all:
+.PHONY : headers/all
+
+# Convenience name for "clean" pass in the directory.
+headers/clean:
+.PHONY : headers/clean
+
+# Convenience name for "preinstall" pass in the directory.
+headers/preinstall:
+.PHONY : headers/preinstall
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.

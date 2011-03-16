@@ -1,1 +1,1 @@
-/usr/bin/gcc     CMakeFiles/ksanavm.dir/lesson1.c.o CMakeFiles/ksanavm.dir/lesson3.c.o CMakeFiles/ksanavm.dir/lesson4.c.o CMakeFiles/ksanavm.dir/main.c.o CMakeFiles/ksanavm.dir/lesson2.c.o CMakeFiles/ksanavm.dir/vm.c.o  -o ksanavm -rdynamic 
+/usr/bin/gcc     CMakeFiles/ksanavm.dir/lesson1.c.o CMakeFiles/ksanavm.dir/lesson3.c.o CMakeFiles/ksanavm.dir/lesson4.c.o CMakeFiles/ksanavm.dir/main.c.o CMakeFiles/ksanavm.dir/lesson2.c.o CMakeFiles/ksanavm.dir/vm.c.o  -o ksanavm -rdynamic -lheaders 
