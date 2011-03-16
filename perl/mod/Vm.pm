@@ -10,6 +10,7 @@ sub KVMSetTib
 {
 	my $self = shift;
 	my $cmd  = shift;
-	$self->{tib} = $cmd ;
+    	my @tokens = split( /\s/, $cmd );
+	$self->{tib} = \@tokens;
 }
 1;

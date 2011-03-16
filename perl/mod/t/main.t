@@ -20,6 +20,7 @@ while (1) {
     print "ok>\n";
     $cmd = <STDIN>;          # get the command from console
     chomp($cmd);             # cut off the \n  
+
     $vm->KVMSetTib($cmd);    # set it as Vm's terminal input buffer
     lesson1($vm);
 
@@ -27,10 +28,10 @@ while (1) {
 }
 
 sub lesson1 {
+    # fetch all token,  and print it out
     my $self = shift;
-    my @tokens = split( /\s/, $self->{tib} );
-    while (@tokens) {
-        my $token = shift(@tokens);
+    while (@{$self->{tib}}) {
+        my $token = shift(@{$vm->{tib}});
         if ( $token eq 'bye' ) {
             $vm->{terminate} = 1;
         }
