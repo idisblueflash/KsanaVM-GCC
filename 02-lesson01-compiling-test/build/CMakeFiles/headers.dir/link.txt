@@ -1,0 +1,2 @@
+/usr/bin/ar cr libheaders.a  CMakeFiles/headers.dir/main.c.o
+/usr/bin/ranlib libheaders.a

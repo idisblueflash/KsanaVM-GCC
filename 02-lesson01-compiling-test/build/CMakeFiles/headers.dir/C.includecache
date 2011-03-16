@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/fox/KsanaVM-GCC/02-lesson01-compiling-test/headers/lesson.h
+
+/home/fox/KsanaVM-GCC/02-lesson01-compiling-test/headers/vm.h
+
+/home/fox/KsanaVM-GCC/02-lesson01-compiling-test/main.c
+stdio.h
+-
+headers/vm.h
+/home/fox/KsanaVM-GCC/02-lesson01-compiling-test/headers/vm.h
+headers/lesson.h
+/home/fox/KsanaVM-GCC/02-lesson01-compiling-test/headers/lesson.h
+

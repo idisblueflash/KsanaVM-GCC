@@ -1,0 +1,2 @@
+/usr/bin/ar cr libsrcs.a  CMakeFiles/srcs.dir/main.c.o
+/usr/bin/ranlib libsrcs.a
