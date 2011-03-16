@@ -30,14 +30,9 @@ while (1) {
 sub lesson1 {
     # fetch all token,  and print it out
     my $self = shift;
-    while (@{$self->{tib}}) {
-        my $token = shift(@{$vm->{tib}});
-        if ( $token eq 'bye' ) {
-            $vm->{terminate} = 1;
-        }
-        else {
-            print "$token\n";
-        }
 
+    foreach my $token (@{$self->{tib}}) { 	
+	print "$token\n";
+        if ( $token eq 'bye' ) { $vm->{terminate} = 1 ; }
     }
 }
