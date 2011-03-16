@@ -6,49 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/fox/KsanaVM-GCC/02-lesson01-compiling-test/lesson.h
-
-/home/fox/KsanaVM-GCC/02-lesson01-compiling-test/lesson1.c
-vm.h
-/home/fox/KsanaVM-GCC/02-lesson01-compiling-test/vm.h
-stdio.h
--
-string.h
--
-
-/home/fox/KsanaVM-GCC/02-lesson01-compiling-test/lesson2.c
-vm.h
-/home/fox/KsanaVM-GCC/02-lesson01-compiling-test/vm.h
-stdio.h
--
-string.h
--
-stdlib.h
--
-
-/home/fox/KsanaVM-GCC/02-lesson01-compiling-test/lesson3.c
-vm.h
-/home/fox/KsanaVM-GCC/02-lesson01-compiling-test/vm.h
-stdio.h
--
-string.h
--
-
-/home/fox/KsanaVM-GCC/02-lesson01-compiling-test/lesson4.c
-vm.h
-/home/fox/KsanaVM-GCC/02-lesson01-compiling-test/vm.h
-stdio.h
--
-string.h
--
-
-/home/fox/KsanaVM-GCC/02-lesson01-compiling-test/main.c
-stdio.h
--
-vm.h
-/home/fox/KsanaVM-GCC/02-lesson01-compiling-test/vm.h
-lesson.h
-/home/fox/KsanaVM-GCC/02-lesson01-compiling-test/lesson.h
+/home/fox/KsanaVM-GCC/02-lesson01-compiling-test/headers/vm.h
 
 /home/fox/KsanaVM-GCC/02-lesson01-compiling-test/vm.c
 stdlib.h
@@ -57,8 +15,6 @@ string.h
 -
 stdio.h
 -
-vm.h
-/home/fox/KsanaVM-GCC/02-lesson01-compiling-test/vm.h
-
-/home/fox/KsanaVM-GCC/02-lesson01-compiling-test/vm.h
+headers/vm.h
+/home/fox/KsanaVM-GCC/02-lesson01-compiling-test/headers/vm.h
 

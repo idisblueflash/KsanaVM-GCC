@@ -3,8 +3,8 @@
 //yap 2007.12.20
 
 #include <stdio.h>
-#include "vm.h"
-#include "lesson.h"
+#include "headers/vm.h"
+#include "headers/lesson.h"
 
 void main()
 {
