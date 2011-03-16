@@ -22,11 +22,27 @@ while (1) {
     chomp($cmd);             # cut off the \n  
 
     $vm->KVMSetTib($cmd);    # set it as Vm's terminal input buffer
-    lesson1($vm);
+    
+    #lesson1($vm);
+    lesson2($vm);
 
     last if ( $vm->{terminate} );
 }
-
+sub lesson2 {
+    my $self = shift;
+    foreach my $token (@{$self->{tib}}) { 	
+	if ( $token eq '+' ){
+	    $self->KVMAdd();
+	}else{
+	    if ($token ~=/^-?\\d+$/){
+	        $vm->KVMPush($token);	
+            }else{
+		print "unkonw command $token\n";
+	    }
+	}
+    }
+	
+}
 sub lesson1 {
     # fetch all token,  and print it out
     my $self = shift;
