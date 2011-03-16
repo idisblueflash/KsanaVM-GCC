@@ -1,0 +1,17 @@
+活體解剖：剎那極簡虛擬機 
+The Anotomy of Ksana Minimal Virtual Machine
+
+Part1 : The Interpreter
+Lesson1: Processing tokens
+Lesson2: Working with stack
+Lesson3: The execution vector
+
+Part2 : The Compiler
+Lesson4: Dictionary      ( HERE , )
+Lesson5: Colon Defination
+Lesson6: Program flow   ( IF-THEN-ELSE, FOR-NEXT )
+
+Part3 : Building Application
+Lesson7: Variable, Array and String
+Lesson8: Calling System API
+
