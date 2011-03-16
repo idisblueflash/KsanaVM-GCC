@@ -19,7 +19,7 @@ print "http://tutor.ksana.tw\n";
 while (1) {
     print "ok>\n";
     $cmd = <STDIN>;          # get the command from console
-    chomp($cmd);             # cut off the enter character
+    chomp($cmd);             # cut off the \n  
     $vm->KVMSetTib($cmd);    # set it as Vm's terminal input buffer
     lesson1($vm);
 
