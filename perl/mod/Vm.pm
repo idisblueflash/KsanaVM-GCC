@@ -1,4 +1,4 @@
-pacakge Vm;
+package Vm;
 
 sub new
 {
@@ -6,4 +6,10 @@ sub new
 	bless \%args, $class ;
 }
 
+sub KVMSetTib
+{
+	my $self = shift;
+	my $cmd  = shift;
+	$self->{tib} = $cmd ;
+}
 1;
