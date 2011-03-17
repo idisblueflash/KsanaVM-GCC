@@ -33,3 +33,4 @@ print Dumper $vm->{datastak};
 ok($vm->KVMMultiply(),'Multiplay功能');
 is(${$vm->{datastak}}[0],2,'乘法结果为2');
 print Dumper $vm->{datastak};
+ok($vm->KVMDumpStack(),'KVMDumpStack函数运行');

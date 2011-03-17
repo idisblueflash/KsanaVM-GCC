@@ -58,5 +58,19 @@ sub KVMMultiply
 	my $r  = $n1 * $n2 ; 		# do  addition
 	$vm->KVMPush($r); 		# push to stack
 }
-
+sub KVMDumpStack
+{
+	my $vm = shift ; 
+	if ( $vm->{sp} < 0 ) {
+		print "Empty stack\n";
+		return ;
+	}
+	my $buf = '' ;
+        my $str = '' ;	
+	for (my $i = 0 ; $i <= $vm->{sp} ; $i++){
+		$str = ${$vm->{datastak}}[$i] ; 
+		$buf = $buf . " " . $str ;
+	}
+	print "$buf\n";
+}
 1;

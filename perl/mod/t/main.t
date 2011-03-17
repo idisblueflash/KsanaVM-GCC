@@ -38,14 +38,17 @@ sub lesson2 {
 	}elsif ( $token eq 'bye'){
 		$vm->{terminate} = 1;	
 	}else{
-	    if ($token =~ /^-?\\d+$/){
-	        $vm->KVMPush($token);	
-            }else{
+            my $v = 0 + $token ;
+
+	    if ( $v == 0 && 0 != ($token eq '0')){
 		print "unkonw command $token\n";
+            }else{
+	        $vm->KVMPush($token);	
 	    }
 	}
     }
 	
+    $vm->KVMDumpStack(); 
 }
 sub lesson1 {
     # fetch all token,  and print it out
