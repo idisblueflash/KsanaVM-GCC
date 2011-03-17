@@ -49,4 +49,14 @@ sub KVMAdd
 	$vm->KVMPush($r); 		# push to stack
 }
 
+# stack effect diagram ( n1 n2 -- r )
+sub KVMMultiply
+{
+	my $vm = shift;
+	my $n2 = $vm->KVMPop(); 	# pop second operand
+	my $n1 = $vm->KVMPop();		# pop first  operand
+	my $r  = $n1 * $n2 ; 		# do  addition
+	$vm->KVMPush($r); 		# push to stack
+}
+
 1;

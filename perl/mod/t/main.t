@@ -34,7 +34,7 @@ sub lesson2 {
 	if ( $token eq '+' ){
 	    $vm->KVMAdd();
 	}elsif ( $token eq '*'){
-		$vm->KVMMultiply
+		$vm->KVMMultiply();
 	}else{
 	    if ($token ~=/^-?\\d+$/){
 	        $vm->KVMPush($token);	
