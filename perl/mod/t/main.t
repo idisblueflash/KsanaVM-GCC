@@ -38,7 +38,7 @@ sub lesson2 {
 	}elsif ( $token eq 'bye'){
 		$vm->{terminate} = 1;	
 	}else{
-	    if ($token ~=/^-?\\d+$/){
+	    if ($token =~ /^-?\\d+$/){
 	        $vm->KVMPush($token);	
             }else{
 		print "unkonw command $token\n";
