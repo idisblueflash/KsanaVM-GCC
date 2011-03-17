@@ -29,10 +29,12 @@ while (1) {
     last if ( $vm->{terminate} );
 }
 sub lesson2 {
-    my $self = shift;
-    foreach my $token (@{$self->{tib}}) { 	
+    my $vm = shift;
+    foreach my $token (@{$vm->{tib}}) { 	
 	if ( $token eq '+' ){
-	    $self->KVMAdd();
+	    $vm->KVMAdd();
+	}elsif ( $token eq '*'){
+		$vm->KVMMultiply
 	}else{
 	    if ($token ~=/^-?\\d+$/){
 	        $vm->KVMPush($token);	
@@ -45,9 +47,9 @@ sub lesson2 {
 }
 sub lesson1 {
     # fetch all token,  and print it out
-    my $self = shift;
+    my $vm = shift;
 
-    foreach my $token (@{$self->{tib}}) { 	
+    foreach my $token (@{$vm->{tib}}) { 	
 	print "$token\n";
         if ( $token eq 'bye' ) { $vm->{terminate} = 1 ; }
     }

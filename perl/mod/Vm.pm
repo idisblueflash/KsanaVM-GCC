@@ -43,10 +43,10 @@ sub KVMPop
 sub KVMAdd
 {
 	my $vm = shift;
-	my $n2 = $vm->KVMPop();
-	my $n1 = $vm->KVMPop();
-	my $r  = $n1 + $n2 ;
-	$vm->KVMPush($r);
+	my $n2 = $vm->KVMPop(); 	# pop second operand
+	my $n1 = $vm->KVMPop();		# pop first  operand
+	my $r  = $n1 + $n2 ; 		# do  addition
+	$vm->KVMPush($r); 		# push to stack
 }
 
 1;
