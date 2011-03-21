@@ -4,6 +4,9 @@ use strict;
 use warnings;
 
 
+my $MAXWORD = 256 ;
+my $nword;
+
 sub new
 {
 	my ($class,%args) = @_;
