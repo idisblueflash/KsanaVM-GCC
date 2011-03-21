@@ -2,15 +2,28 @@ package Vm;
 
 use strict;
 use warnings;
+use Ksanaword ;
+use Data::Dumper ;
 
+my $ksanaword = Ksanaword->new();
 
 my $MAXWORD = 256 ;
-my $nword;
+my $nword = 0 ;
+my @vectors ;
 
 sub new
 {
 	my ($class,%args) = @_;
 	bless \%args, $class ;
+}
+
+sub nwordcount 
+{
+    $nword;
+}
+
+sub maxwordvalue{
+    $MAXWORD;
 }
 
 sub KVMSetTib
@@ -80,4 +93,23 @@ sub KVMDumpStack
 	}
 	print "$buf\n";
 }
+
+sub KVMAddWord{
+    my $vm      = shift ;
+    my $name    = shift ;
+    my $KVMXT   = shift ;
+
+    if ( $nword >= $MAXWORD ){
+        print "Too many words!\n";
+        return ;
+    }
+
+    my $ksanaword = Ksanaword->new($name,$KVMXT);
+    print Dumper $ksanaword ; #debug line
+    push ( @vectors, $ksanaword ); #无法用定位方式赋值，采用push
+    $nword++ ;
+
+}
+
+
 1;
