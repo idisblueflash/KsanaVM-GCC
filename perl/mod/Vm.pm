@@ -1,5 +1,9 @@
 package Vm;
 
+use strict;
+use warnings;
+
+
 sub new
 {
 	my ($class,%args) = @_;
