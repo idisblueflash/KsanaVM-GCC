@@ -24,10 +24,17 @@ while (1) {
     $virtualMachine->KVMSetTib($cmd);    # set it as Vm's terminal input buffer
     
     #lesson1($virtualMachine);
-    lesson2($virtualMachine);
+    #lesson2($virtualMachine);
+    lesson3($virtualMachine);
 
     last if ( $virtualMachine->{terminate} );
 }
+
+sub lesson3 {
+    my $vm = shift ; 
+    
+}
+
 sub lesson2 {
     my $vm = shift;
     foreach my $token (@{$vm->{tib}}) { 	
@@ -47,7 +54,6 @@ sub lesson2 {
 	    }
 	}
     }
-	
     $vm->KVMDumpStack(); 
 }
 sub lesson1 {
