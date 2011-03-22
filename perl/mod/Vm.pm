@@ -181,11 +181,24 @@ sub addbasicword{
     $vm->KVMAddWord("/",\&KVMDivide);
     $vm->KVMAddWord("drop",\&KVMDrop);
     $vm->KVMAddWord("dup",\&KVMDup);
-    #$vm->KVMAddWord("over",\&KVMOver);
+    $vm->KVMAddWord("over",\&KVMOver);
     $vm->KVMAddWord("bye",\&KVMBye);
 
 }
 
+# stack effect diagram ( n1 n2 -- n1 n2 n1 )
+sub KVMOver {
+    my $vm 	= shift ;
+    my $temp 	= '' ;
+    my $sp_num 	= $vm->{sp} ;
+
+    if ( $sp_num < 1  ){
+    print "Need at least 2 items on stack\n";
+    return ;
+    }
+    $temp 	= ${$vm->{datastak}}[$sp_num - 1 ] ;
+    $vm->KVMPush($temp);
+}
 # stack effect diagram ( n1 n2 -- r )
 sub KVMDrop{
     my $vm 	= shift ;
