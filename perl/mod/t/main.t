@@ -38,16 +38,16 @@ sub lesson3 {
     
     if ( $vm->KVMFindWord("+") ne '+' ){
         $vm->addbasicword();
-	print "add basic word finished.\n";
+	#print "add basic word finished.\n";
     }
    
     foreach my $token (@{$vm->{tib}}){
         $xt = $vm->KVMFindWord($token);
 
 
-	is($xt,"dup",'测试KVMFindWord返回值') ;
+	#is($xt,"dup",'测试KVMFindWord返回值') ;
         if ($xt){
-            $vm->{$xt} ;  #excute!
+            $xt->($vm) ;  #excute!
         }else{
             $v = 0 + $token ;
             if ( $v == 0 && 0 != ( $token eq '0') ) {
