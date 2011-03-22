@@ -109,7 +109,7 @@ sub KVMDumpStack
 	my $buf = '' ;
         my $str = '' ;	
 	for (my $i = 0 ; $i <= $vm->{sp} ; $i++){
-		$str = ${$vm->{datastak}}[$i] ; 
+		$str = ${$vm->{datastak}}[$i] || ''; 
 		$buf = $buf . " " . $str ;
 	}
 	print "$buf\n";
