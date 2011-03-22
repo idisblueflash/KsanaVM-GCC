@@ -39,7 +39,8 @@ sub KVMPush
 {
 	my $vm = shift;
 	my $v    = shift;
-   	if ($vm->{sp} >= $STACK_DEPTH ){
+	my $sp_num = $vm->{sp} || 0 ;
+   	if ($sp_num >= $STACK_DEPTH ){
 		print "Stack Overflow\n";
 		return; 
 	}
