@@ -128,7 +128,6 @@ sub KVMAddWord{
     my $ksanaword = Ksanaword->new($name,$KVMXT);
     print Dumper $ksanaword ; #debug line
     $vectors[$nword] = $ksanaword ;
-    $vm->{$name} = $KVMXT ;
     #print Dumper @vectors ; #debug line
     $nword++ ;
     return 1;
@@ -145,7 +144,7 @@ sub KVMFindWord{
         $word  	= $vectors[$i] ;
 	print Dumper $word;
         if ($word->{name} eq $name) {
-            return $word->{name};
+            return $word->{KVMXT};
         }
     }
     return 0 ;
@@ -153,7 +152,8 @@ sub KVMFindWord{
 
 sub KVMTOS{
     my $vm 	= shift ;
-    my $re      = $vm->{datastak}[$vm->{sp}] ;
+    print "debug: TOS worked.\n";
+    my $re      = ${$vm->{datastak}}[$vm->{sp}] ;
     return $re ;
 }
 
@@ -164,7 +164,10 @@ sub KVMDup{
         print "Stack Overflow!\n";
         return ;
     }
-    $vm->KVMPush($vm->KVMTOS());
+    print "debug: Dup worked.\n";
+    print Dumper $vm ;
+    my $stack_top_data = $vm->KVMTOS() ;
+    $vm->KVMPush($stack_top_data);
 }
 
 sub addbasicword{
