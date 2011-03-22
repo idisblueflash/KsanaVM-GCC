@@ -179,7 +179,7 @@ sub addbasicword{
     $vm->KVMAddWord("-",\&KVMMinus);
     $vm->KVMAddWord("*",\&KVMMultiply);
     $vm->KVMAddWord("/",\&KVMDivide);
-    #$vm->KVMAddWord("drop",\&KVMDrop);
+    $vm->KVMAddWord("drop",\&KVMDrop);
     $vm->KVMAddWord("dup",\&KVMDup);
     #$vm->KVMAddWord("over",\&KVMOver);
     $vm->KVMAddWord("bye",\&KVMBye);
@@ -189,7 +189,7 @@ sub addbasicword{
 # stack effect diagram ( n1 n2 -- r )
 sub KVMDrop{
     my $vm 	= shift ;
-    return ; 
+    $vm->KVMPop();
 }
 
 sub KVMBye{
