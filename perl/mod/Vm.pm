@@ -128,6 +128,7 @@ sub KVMAddWord{
     my $ksanaword = Ksanaword->new($name,$KVMXT);
     print Dumper $ksanaword ; #debug line
     $vectors[$nword] = $ksanaword ;
+    $vm->{$name} = $KVMXT ;
     #print Dumper @vectors ; #debug line
     $nword++ ;
     return 1;
@@ -142,8 +143,9 @@ sub KVMFindWord{
     my $i ;
     for ($i=$nword ; $i>=0 ; $i-- ){
         $word  	= $vectors[$i] ;
+	print Dumper $word;
         if ($word->{name} eq $name) {
-            return $word->{KVMXT};
+            return $word->{name};
         }
     }
     return 0 ;
@@ -167,7 +169,7 @@ sub KVMDup{
 
 sub addbasicword{
     my $vm 	= shift ;
-    #$vm->KVMAddWord("+",\&KVMAdd);
+    $vm->KVMAddWord("+",\&KVMAdd);
     #$vm->KVMAddWord("-",\&KVMMinus);
     $vm->KVMAddWord("*",\&KVMMultiply);
     #$vm->KVMAddWord("/",\&KVMDivide);
