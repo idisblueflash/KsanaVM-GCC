@@ -183,7 +183,18 @@ sub addbasicword{
     $vm->KVMAddWord("dup",\&KVMDup);
     $vm->KVMAddWord("over",\&KVMOver);
     $vm->KVMAddWord("bye",\&KVMBye);
+    $vm->KVMAddWord("swap",\&KVMSwap);
 
+}
+# stack effect diagram ( n1 n2 -- n2 n1 )
+sub KVMSwap{
+    my $vm 	= shift ;
+    my $sp_num  = $vm->{sp};
+    if ( $sp_num < 1 ){
+        print "Need at least 2 items on stack.\n";
+        return ;
+    }
+    ( ${$vm->{datastak}}[$vm->{sp}], ${$vm->{datastak}}[$vm->{sp} - 1] ) = ( ${$vm->{datastak}}[$vm->{sp} - 1 ], ${$vm->{datastak}}[$vm->{sp}] )
 }
 
 # stack effect diagram ( n1 n2 -- n1 n2 n1 )
