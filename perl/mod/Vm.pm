@@ -144,8 +144,8 @@ sub KVMFindWord{
     for ($i=$nword ; $i>=0 ; $i-- ){
         $word  	= $vectors[$i] || {name => 'EmptyName', KVMXT => 'EmptySub'};
 	#print Dumper $word;
-	print $word->{name} . "word.name数据分析\n";
-	print $name . "name数据分析\n";
+	#print $word->{name} . "word.name数据分析\n";
+	#print $name . "name数据分析\n";
         if ($word->{name} eq $name) {
             return $word->{KVMXT};
         }
@@ -176,13 +176,13 @@ sub KVMDup{
 sub addbasicword{
     my $vm 	= shift ;
     $vm->KVMAddWord("+",\&KVMAdd);
-    #$vm->KVMAddWord("-",\&KVMMinus);
+    $vm->KVMAddWord("-",\&KVMMinus);
     $vm->KVMAddWord("*",\&KVMMultiply);
-    #$vm->KVMAddWord("/",\&KVMDivide);
+    $vm->KVMAddWord("/",\&KVMDivide);
     #$vm->KVMAddWord("drop",\&KVMDrop);
     $vm->KVMAddWord("dup",\&KVMDup);
     #$vm->KVMAddWord("over",\&KVMOver);
-    #$vm->KVMAddWord("bye",\&KVMBye);
+    $vm->KVMAddWord("bye",\&KVMBye);
 
 }
 
