@@ -36,7 +36,7 @@ print Dumper $vm->{datastak};
 ok($vm->KVMDumpStack(),'KVMDumpStack函数运行');
 is ( Vm->nwordcount , 0 , 'nword数值检测' );
 is ( Vm->maxwordvalue, 256 , 'MAXWORD数值检测' );
-ok ( $vm->KVMAddWord("Divide",'divide_handle'),'KVMAddWord->Ksanaword 创建测试' );
+ok ( $vm->KVMAddWord("Divide",\&KVMDivide),'KVMAddWord->Ksanaword 创建测试' );
 is ( Vm->nwordcount , 1 , 'nword数值检测' );
 is ( $vm->KVMFindWord("Divide"),'divide_handle', 'KVMFindWord测试');
 is ( $vm->KVMTOS(), 2 , '测试KVMTOS' ) ;

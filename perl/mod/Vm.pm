@@ -128,7 +128,7 @@ sub KVMAddWord{
     my $ksanaword = Ksanaword->new($name,$KVMXT);
     print Dumper $ksanaword ; #debug line
     $vectors[$nword] = $ksanaword ;
-    print Dumper @vectors ; #debug line
+    #print Dumper @vectors ; #debug line
     $nword++ ;
     return 1;
 
@@ -167,14 +167,14 @@ sub KVMDup{
 
 sub addbasicword{
     my $vm 	= shift ;
-    $vm->KVMAddWord("+",\&KVMAdd);
-    $vm->KVMAddWord("-",\&KVMMinus);
+    #$vm->KVMAddWord("+",\&KVMAdd);
+    #$vm->KVMAddWord("-",\&KVMMinus);
     $vm->KVMAddWord("*",\&KVMMultiply);
-    $vm->KVMAddWord("/",\&KVMDivide);
+    #$vm->KVMAddWord("/",\&KVMDivide);
     #$vm->KVMAddWord("drop",\&KVMDrop);
-    $vm->KVMAddWord("Dup",\&KVMDup);
+    $vm->KVMAddWord("dup",\&KVMDup);
     #$vm->KVMAddWord("over",\&KVMOver);
-    $vm->KVMAddWord("bye",\&KVMBye);
+    #$vm->KVMAddWord("bye",\&KVMBye);
 
 }
 

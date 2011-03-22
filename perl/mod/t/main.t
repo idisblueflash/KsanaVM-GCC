@@ -4,6 +4,7 @@ use strict;
 use warnings;
 push( @INC, '..' );
 use Test::More tests => 2;
+use Data::Dumper ;
 
 use_ok('Vm') or exit;
 
@@ -37,10 +38,13 @@ sub lesson3 {
     
     if ( $vm->KVMFindWord("+") == 0 ){
         $vm->addbasicword();
+	print "add basic word finished.\n";
     }
    
     foreach my $token (@{$vm->{tib}}){
         $xt = $vm->KVMFindWord($token);
+	print Dumper \&$vm->KVMDup() ;
+	print Dumper $xt ;
         if ($xt){
             $xt ;  #excute!
         }else{
