@@ -32,6 +32,27 @@ while (1) {
 
 sub lesson3 {
     my $vm = shift ; 
+    my $xt = shift ;
+    my $v ;
+    
+    if ( $vm->KVMFindWord("+") == 0 ){
+        $vm->addbasicword();
+    }
+   
+    foreach my $token (@{$vm->{tib}}){
+        $xt = $vm->KVMFindWord($token);
+        if ($xt){
+            $xt ;  #excute!
+        }else{
+            $v = 0 + $token ;
+            if ( $v == 0 && 0 != ( $token eq '0') ) {
+                print "Unkown Command $token.\n";
+            }else{
+                $vm->KVMPush($token);
+            }
+        }
+    }
+    $vm->KVMDumpStack();
     
 }
 
