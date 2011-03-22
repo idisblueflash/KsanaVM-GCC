@@ -136,15 +136,15 @@ sub KVMAddWord{
 
 sub KVMFindWord{
     my $vm 	= shift ;
-    my $name	= shift ;
+    my $name	= shift || 'UnNamed';
 
     my $word 	= Ksanaword->new() ;
     my $i ;
     for ($i=$nword ; $i>=0 ; $i-- ){
-        $word  	= $vectors[$i] || {};
+        $word  	= $vectors[$i] || {name => 'EmptyName', KVMXT => 'EmptySub'};
 	#print Dumper $word;
-	print Dumper $word . "word数据分析";
-	print Dumper $name . "name数据分析";
+	print $word->{name} . "word.name数据分析\n";
+	print $name . "name数据分析\n";
         if ($word->{name} eq $name) {
             return $word->{KVMXT};
         }
