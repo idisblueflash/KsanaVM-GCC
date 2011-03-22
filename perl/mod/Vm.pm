@@ -128,5 +128,11 @@ sub KVMFindWord{
     return 0 ;
 }
 
+sub KVMTOS{
+    my $vm 	= shift ;
+    my $re      = $vm->{datastak}[$vm->{sp}] ;
+    return $re ;
+}
+
 1;
 
