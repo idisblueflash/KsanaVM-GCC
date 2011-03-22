@@ -141,8 +141,10 @@ sub KVMFindWord{
     my $word 	= Ksanaword->new() ;
     my $i ;
     for ($i=$nword ; $i>=0 ; $i-- ){
-        $word  	= $vectors[$i] ;
+        $word  	= $vectors[$i] || {};
 	#print Dumper $word;
+	print Dumper $word . "word数据分析";
+	print Dumper $name . "name数据分析";
         if ($word->{name} eq $name) {
             return $word->{KVMXT};
         }
