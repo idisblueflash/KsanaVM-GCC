@@ -106,12 +106,27 @@ sub KVMAddWord{
 
     my $ksanaword = Ksanaword->new($name,$KVMXT);
     print Dumper $ksanaword ; #debug line
-    push ( @vectors, $ksanaword ); #无法用定位方式赋值，采用push
+    $vectors[$nword] = $ksanaword ;
     print Dumper @vectors ; #debug line
     $nword++ ;
     return 1;
 
 }
 
+sub KVMFindWord{
+    my $vm 	= shift ;
+    my $name	= shift ;
+
+    my $word 	= Ksanaword->new() ;
+    my $i ;
+    for ($i=$nword ; $i>=0 ; $i-- ){
+        $word  	= $vectors[$i] ;
+        if ($word->{name} eq $name) {
+            return $word->{KVMXT};
+        }
+    }
+    return 0 ;
+}
 
 1;
+

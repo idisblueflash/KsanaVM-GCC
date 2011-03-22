@@ -5,7 +5,7 @@ use warnings;
 use Data::Dumper;
 push (@INC, '..');
 
-use Test::More tests => 17;
+use Test::More tests => 18;
 use Test::Differences;
 
 use_ok( 'Vm' ) or exit;
@@ -38,4 +38,4 @@ is ( Vm->nwordcount , 0 , 'nword数值检测' );
 is ( Vm->maxwordvalue, 256 , 'MAXWORD数值检测' );
 ok ( $vm->KVMAddWord("Divide",'divide_handle'),'KVMAddWord->Ksanaword 创建测试' );
 is ( Vm->nwordcount , 1 , 'nword数值检测' );
-
+is ( $vm->KVMFindWord("Divide"),'divide_handle', 'KVMFindWord测试');
