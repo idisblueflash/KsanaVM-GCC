@@ -70,6 +70,16 @@ sub KVMAdd
 }
 
 # stack effect diagram ( n1 n2 -- r )
+sub KVMMinus
+{
+	my $vm = shift;
+	my $n2 = $vm->KVMPop(); 	# pop second operand
+	my $n1 = $vm->KVMPop();		# pop first  operand
+	my $r  = $n1 - $n2 ; 		# do  minus 
+	$vm->KVMPush($r); 		# push to stack
+}
+
+# stack effect diagram ( n1 n2 -- r )
 sub KVMMultiply
 {
 	my $vm = shift;
@@ -78,6 +88,17 @@ sub KVMMultiply
 	my $r  = $n1 * $n2 ; 		# do  addition
 	$vm->KVMPush($r); 		# push to stack
 }
+
+# stack effect diagram ( n1 n2 -- r )
+sub KVMDivide
+{
+	my $vm = shift;
+	my $n2 = $vm->KVMPop(); 	# pop second operand
+	my $n1 = $vm->KVMPop();		# pop first  operand
+	my $r  = $n1 / $n2 ; 		# do  addition
+	$vm->KVMPush($r); 		# push to stack
+}
+
 sub KVMDumpStack
 {
 	my $vm = shift ; 
@@ -134,5 +155,38 @@ sub KVMTOS{
     return $re ;
 }
 
+# stack effect diagram ( n -- n n )
+sub KVMDup{
+    my $vm 	= shift ;
+    if ( $vm->{sp} >= $STACK_DEPTH ){
+        print "Stack Overflow!\n";
+        return ;
+    }
+    $vm->KVMPush($vm->KVMTOS());
+}
+
+sub addbasicword{
+    my $vm 	= shift ;
+    $vm->KVMAddWord("+",\&KVMAdd);
+    $vm->KVMAddWord("-",\&KVMMinus);
+    $vm->KVMAddWord("*",\&KVMMultiply);
+    $vm->KVMAddWord("/",\&KVMDivide);
+    #$vm->KVMAddWord("drop",\&KVMDrop);
+    $vm->KVMAddWord("Dup",\&KVMDup);
+    #$vm->KVMAddWord("over",\&KVMOver);
+    $vm->KVMAddWord("bye",\&KVMBye);
+
+}
+
+# stack effect diagram ( n1 n2 -- r )
+sub KVMDrop{
+    my $vm 	= shift ;
+    return ; 
+}
+
+sub KVMBye{
+    my $vm 	= shift ;
+    $vm->{terminate} = 1;	
+}
 1;
 
