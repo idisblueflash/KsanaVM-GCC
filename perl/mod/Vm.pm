@@ -107,7 +107,9 @@ sub KVMAddWord{
     my $ksanaword = Ksanaword->new($name,$KVMXT);
     print Dumper $ksanaword ; #debug line
     push ( @vectors, $ksanaword ); #无法用定位方式赋值，采用push
+    print Dumper @vectors ; #debug line
     $nword++ ;
+    return 1;
 
 }
 
