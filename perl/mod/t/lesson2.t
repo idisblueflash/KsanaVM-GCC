@@ -18,7 +18,7 @@ print "Tutorial of Ksana Minimal Virtual Machine\n";
 print "http://tutor.ksana.tw\n";
 
 while (1) {
-    print "ok>\n";
+    print "ok>";
     $cmd = <STDIN>;          # get the command from console
     chomp($cmd);             # cut off the \n  
 
