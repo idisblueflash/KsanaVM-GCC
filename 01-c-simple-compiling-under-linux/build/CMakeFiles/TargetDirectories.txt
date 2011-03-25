@@ -1,1 +1,0 @@
-/home/fox/KsanaVM-GCC/01-c-simple-compiling-under-linux/build/CMakeFiles/hello.dir

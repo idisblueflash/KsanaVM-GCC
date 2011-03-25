@@ -1,1 +1,0 @@
-/usr/bin/gcc     CMakeFiles/ksanavm.dir/main.c.o  -o ksanavm -rdynamic libheaders.a 
