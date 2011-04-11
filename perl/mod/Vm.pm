@@ -138,16 +138,35 @@ sub KVMDumpStack {
         }
     }
     print "$buf\n";
-    &showDictonary() ;
+    &showDictionary() ;
+    &hexDictionary() ;
 }
-sub showDictonary{
+sub hexDictionary{
 	my $n = 0 ;
-	print "dictionary:";
+	print "HexDictionary:";
 	foreach my $dict (@dictionary) {
-		print "[$n]=";
 		if ( &checkUndef($dict)){
+			print "\n";
+			print &DecToNumBase($dict,16) ;
+		}else{
+			print "00" ;
+		}
+		print " " ;
+		$n++;
+	}
+	print "\n";
+	
+}
+sub showDictionary{
+	my $n = 0 ;
+	print "DecDictionary:";
+	foreach my $dict (@dictionary) {
+		if ( &checkUndef($dict)){
+			print "\n";
+			print "[$n]=";
 			print $dict ;
 		}else{
+			print "[$n]=";
 		
 		}
 		print "\t" ;
@@ -156,6 +175,37 @@ sub showDictonary{
 	print "\n";
 }
 
+# define the subroutine
+sub DecToNumBase
+{
+  my $decNumber = $_[0];
+  my $numBase = $_[1];
+  my $numNumber = '';
+
+  while($decNumber ne 'end') 
+  {
+    # divide the decimal number by $numBase and 
+    # store the remainder (modulus function) in 
+    # the temporary variable $temp
+    my $temp = $decNumber % $numBase;
+    if($temp > 9) 
+    {
+      $temp = chr($temp + 55);
+    }
+    $numNumber = $temp . $numNumber;
+    $decNumber = int($decNumber / $numBase);
+    if($decNumber < $numBase) 
+    {
+      if($decNumber > 9) 
+      {
+        $decNumber = chr($decNumber + 55);
+      }
+      $numNumber = $decNumber . $numNumber;
+      $decNumber = 'end'; 
+    } 
+  }
+  return $numNumber;
+}
 sub checkUndef{
 	my $org = shift;
 	if ( defined $org ){
