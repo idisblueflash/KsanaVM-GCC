@@ -138,8 +138,32 @@ sub KVMDumpStack {
         }
     }
     print "$buf\n";
+    &showDictonary() ;
+}
+sub showDictonary{
+	my $n = 0 ;
+	print "dictionary:";
+	foreach my $dict (@dictionary) {
+		print "[$n]=";
+		if ( &checkUndef($dict)){
+			print $dict ;
+		}else{
+		
+		}
+		print "\t" ;
+		$n++;
+	}
+	print "\n";
 }
 
+sub checkUndef{
+	my $org = shift;
+	if ( defined $org ){
+		1 ;
+	}else{
+		return 0;
+	}
+}
 sub KVMAddWord {
     my $vm    = shift;
     my $name  = shift;
