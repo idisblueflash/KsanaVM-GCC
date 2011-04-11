@@ -246,5 +246,11 @@ sub DictComiple{
     $vm->{here} += $CELLSIZE ;
 }
 
+sub adddictword{
+    my $vm = shift;
+    $vm->KVMAddWord("here",\&KVMhere);
+    $vm->KVMAddWord(",",\&KVMComma);
+}
+
 1;
 
