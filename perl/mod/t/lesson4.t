@@ -33,8 +33,8 @@ while (1) {
 
 sub adddictword{
     my $vm = shift;
-    $vm->KVMAddWord("here",KVMhere);
-    $vm->KVMAddWord(",",KVMComma);
+    $vm->KVMAddWord("here",\&KVMhere);
+    $vm->KVMAddWord(",",\&KVMComma);
 
 }
 sub lesson4{

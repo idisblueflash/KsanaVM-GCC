@@ -226,5 +226,25 @@ sub KVMBye{
     my $vm 	= shift ;
     $vm->{terminate} = 1;	
 }
+# Compilers Lesson4
+sub KVMhere{
+    my $vm = shift;
+    $vm->KVMPush($vm->{here});
+}
+
+sub KVMComma{
+    my $vm = shift;
+    $vm->DictComiple($vm->KVMPop());
+}
+
+sub DictComiple{
+    my $vm = shift;
+    my $i  = shift;
+    # write an integer to the dictionary
+    $dictionary[$vm->{here}] = $i ;
+    # advance the here pointer
+    $vm->{here} += $CELLSIZE ;
+}
+
 1;
 
