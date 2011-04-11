@@ -116,7 +116,7 @@ sub KVMDumpStack
 	my $buf = '' ;
         my $str = '' ;	
 	for (my $i = 0 ; $i <= $vm->{sp} ; $i++){
-		$str = ${$vm->{datastak}}[$i] || ''; 
+		$str = ${$vm->{datastak}}[$i] || '0'; 
 		$buf = $buf . " " . $str ;
 	}
 	print "$buf\n";
@@ -229,7 +229,7 @@ sub KVMBye{
 # Compilers Lesson4
 sub KVMhere{
     my $vm = shift;
-    $vm->KVMPush($vm->{here});
+    $vm->KVMPush($here);
 }
 
 sub KVMComma{
@@ -241,9 +241,9 @@ sub DictComiple{
     my $vm = shift;
     my $i  = shift;
     # write an integer to the dictionary
-    $dictionary[$vm->{here}] = $i ;
+    $dictionary[$here] = $i ;
     # advance the here pointer
-    $vm->{here} += $CELLSIZE ;
+    $here += $CELLSIZE ;
 }
 
 sub adddictword{

@@ -31,12 +31,6 @@ while (1) {
     last if ( $virtualMachine->{terminate} );
 }
 
-sub adddictword{
-    my $vm = shift;
-    $vm->KVMAddWord("here",\&KVMhere);
-    $vm->KVMAddWord(",",\&KVMComma);
-
-}
 sub lesson4{
     my $vm = shift;
 
