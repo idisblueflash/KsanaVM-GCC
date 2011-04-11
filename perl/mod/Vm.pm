@@ -11,6 +11,12 @@ my $MAXWORD = 256 ;
 my $nword = 0 ;
 my @vectors ;
 
+#lesson 4
+my $DICTSIZE = 4096;  #好像在perl裏面不需要
+my $CELLSIZE = 4 ;
+my @dictionary;
+my $here = 0 ; 		#write from here
+#lesson 5
 sub new
 {
 	my ($class,%args) = @_;
