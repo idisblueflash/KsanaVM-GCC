@@ -2,6 +2,7 @@ package Compiler;
 
 use strict;
 use warnings;
+use Vm;
 
 sub new
 {
